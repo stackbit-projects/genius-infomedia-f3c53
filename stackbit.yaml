@@ -1,0 +1,44 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: boolean
+        name: published
+        label: Published
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - 404.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: number
+        name: title
+        label: Title
+        subtype: int
+  page_2:
+    type: page
+    label: Page 2
+    match: '*'
+    exclude:
+      - 404.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
